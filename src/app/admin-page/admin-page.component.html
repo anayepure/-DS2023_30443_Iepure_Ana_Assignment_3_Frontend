@@ -1,0 +1,19 @@
+<p>
+  <mat-toolbar>
+    <span class="title">Admin page</span>
+    <button (click)="logOut()" mat-raised-button color="primary">Log out</button>
+  </mat-toolbar>
+</p>
+<div class="panels">
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab body-class="admin-page-users" label="Users">
+      <app-admin-page-users></app-admin-page-users>
+    </mat-tab>
+    <mat-tab body-class="admin-page-devices" label="Devices">
+      <app-admin-page-devices></app-admin-page-devices>
+    </mat-tab>
+    <mat-tab body-class="chat" label="Chat">
+      <app-chat></app-chat>
+    </mat-tab>
+  </mat-tab-group>
+</div>

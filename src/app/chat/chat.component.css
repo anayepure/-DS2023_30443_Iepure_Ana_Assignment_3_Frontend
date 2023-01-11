@@ -1,0 +1,22 @@
+.chat-box
+{
+  margin-top: 40px;
+  margin-left: 400px;
+  height: 40vh;
+  width: 40vw;
+}
+.form
+{
+  margin-left: 400px;
+  width: 40vw;
+}
+.type-chat
+{
+  margin-left: 400px;
+  height: 30vh;
+  width: 42vw;
+}
+.input
+{
+  height: 10vh;
+}

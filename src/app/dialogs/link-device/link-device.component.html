@@ -1,0 +1,26 @@
+<div class="edit-container">
+  <mat-card class="mat-card-edit">
+    <mat-card-title>Link Device</mat-card-title>
+    <div class="edit-content">
+      <form [formGroup]="editForm" >
+        <div class="form">
+          <mat-form-field color="primary">
+            <input
+              #input
+              class="form-control"
+              formControlName="deviceid"
+              matInput
+              placeholder="Enter the device id"
+              required
+            />
+
+          </mat-form-field>
+        </div>
+      </form>
+      <div class="buttons">
+        <button (click)="onNoClick()" mat-raised-button color="primary">Close</button>
+        <button (click)="linkDevice()" mat-raised-button color="primary">Save</button>
+      </div>
+    </div>
+  </mat-card>
+</div>

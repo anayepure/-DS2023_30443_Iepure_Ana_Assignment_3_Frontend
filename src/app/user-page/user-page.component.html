@@ -1,0 +1,19 @@
+<p>
+  <mat-toolbar class="toolbar-elements">
+    <span>{{user.username}}'s page</span>
+    <button (click)="logOut()" mat-raised-button color="primary">Log out</button>
+  </mat-toolbar>
+</p>
+<div class="panels">
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab body-class="user-page-measurements" label="Measurements">
+      <app-user-page-measurements></app-user-page-measurements>
+    </mat-tab>
+    <mat-tab body-class="user-page-devices" label="Devices">
+      <app-user-page-devices></app-user-page-devices>
+    </mat-tab>
+    <mat-tab body-class="chat" label="Chat">
+      <app-chat></app-chat>
+    </mat-tab>
+  </mat-tab-group>
+</div>

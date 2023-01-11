@@ -1,0 +1,31 @@
+<ngx-charts-bar-vertical
+  [view]="view"
+  [results]="series"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+>
+</ngx-charts-bar-vertical>
+<div class="filters" [formGroup]="formFilter">
+<mat-form-field appearance="fill">
+  <mat-label>Choose Device</mat-label>
+  <mat-select formControlName="devices">
+    <mat-option *ngFor="let deviceToChoose of devices" [value]="deviceToChoose.id">
+      {{deviceToChoose.description}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="time">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+

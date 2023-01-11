@@ -1,0 +1,45 @@
+<button (click)="openAddDialog()" class="add-button" color="primary" mat-raised-button>
+  Add Device
+</button>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="location">
+    <th mat-header-cell *matHeaderCellDef>location</th>
+    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="maximumconsumption">
+    <th mat-header-cell *matHeaderCellDef>Maximum Consumption</th>
+    <td mat-cell *matCellDef="let element"> {{element.maximumconsumption}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element, let i=index"><button (click)="deleteDevice(element.id)" color="primary" mat-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+      <button color="primary" mat-button (click)="openEditDialog(element.id)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+

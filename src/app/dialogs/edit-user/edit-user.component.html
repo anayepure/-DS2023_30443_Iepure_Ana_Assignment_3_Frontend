@@ -1,0 +1,41 @@
+<div class="edit-container">
+  <mat-card class="mat-card-edit">
+    <mat-card-title>Edit User</mat-card-title>
+    <div class="edit-content">
+    <form [formGroup]="editForm" >
+      <div class="form">
+        <mat-form-field color="primary">
+          <input
+            #input
+            class="form-control"
+            formControlName="username"
+            matInput
+            placeholder="Username"
+            required
+          />
+
+        </mat-form-field>
+
+        <mat-form-field
+          appearance="legacy"
+          class="descriptive"
+          color="primary"
+        >
+        <textarea
+          #input
+          class="form-control"
+          formControlName="password"
+          matInput
+          placeholder="Password"
+          required
+        ></textarea>
+        </mat-form-field>
+      </div>
+    </form>
+    <div class="buttons">
+    <button (click)="onNoClick()" mat-raised-button color="primary">Close</button>
+    <button (click)="updateUser()" mat-raised-button color="primary">Save</button>
+    </div>
+    </div>
+  </mat-card>
+</div>

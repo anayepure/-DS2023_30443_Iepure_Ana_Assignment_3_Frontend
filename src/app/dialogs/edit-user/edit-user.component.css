@@ -1,0 +1,26 @@
+.edit-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-content
+{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mat-card-edit
+{
+  height: 300px;
+  width:300px;
+}
+
+.buttons
+{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}

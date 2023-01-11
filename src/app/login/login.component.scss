@@ -1,0 +1,20 @@
+.login-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:100px;
+}
+
+.login-content
+{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mat-card-login
+{
+  height: 300px;
+  width:300px;
+}
